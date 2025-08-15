@@ -1,0 +1,63 @@
+/* Importing a professional, aesthetic font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+.cta-section {
+  width: 100%;
+  padding: 50px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.cta-card {
+  background: linear-gradient(135deg, #e8f6f3, #d4ede9); /* Cool, aesthetic background */
+  border-radius: 12px;
+  padding: 40px 60px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  max-width: 900px;
+  width: 90%;
+  font-family: 'Inter', sans-serif;
+}
+
+.cta-title {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #023430;
+}
+
+.cta-button {
+  background-color: #4CAF50; /* Light green button */
+  color: white;
+  border: none;
+  padding: 15px 40px;
+  font-size: 1.1rem;
+  font-family: 'Inter', sans-serif;
+  border-radius: 30px;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+  animation: pulseBorder 2s infinite;
+}
+
+/* Glowing animated border effect */
+.cta-button::before {
+  content: '';
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  right: -4px;
+  bottom: -4px;
+  border-radius: 35px;
+  background: linear-gradient(45deg, #00ff88, #00aaff, #aaff00);
+  background-size: 300%;
+  animation: borderMove 3s linear infinite;
+  z-index: -1;
+}
+
+@keyframes borderMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
