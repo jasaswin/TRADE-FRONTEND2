@@ -1,5 +1,5 @@
 
-// // src/pages/Home/Hero.js
+// // // src/pages/Home/Hero.js
 // import React from "react";
 // import "./home.css";
 // import { motion } from "framer-motion";
@@ -66,4 +66,10 @@ const Hero = () => {
 };
 
 export default Hero;
+
+
+
+
+
+
 

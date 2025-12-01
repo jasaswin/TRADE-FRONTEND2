@@ -26,7 +26,38 @@
 }
 
 .custom-btn:hover {
-  background-color: #d8b4fe; /* Light violet */
-  color: #ffffff;
+  background-color: #d8b4fe;    /*Light violet*? */
+   color: #ffffff; 
   border-radius: 6px;
+ } 
+ 
+
+
+
+ /* Header.css - Palette 4 (Soft Purple + Blue) */
+
+/* Ensure you have palette variables in a global CSS (index.css).
+   If not, you can paste these near the top of your index.css:
+:root {
+  --primary: #6C63FF;
+  --secondary: #3AB0FF;
+  --accent-pink: #FF6EC7;
+  --bg-light: #F8F9FC;
+  --header-glass: rgba(255,255,255,0.5);
+  --footer-bg: #2A2D41;
+  --card-bg: #FFFFFF;
+  --card-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  --text: #222B45;
+  --text-muted: #8F9BB3;
+  --gradient-cta: linear-gradient(90deg, #6C63FF, #3AB0FF);
+  --gradient-hover: linear-gradient(90deg, #5A53EE, #239DF5);
+  --radius-lg: 18px;
+  --radius-pill: 999px;
+  --glass-blur: blur(12px);
+  --transition: 240ms cubic-bezier(.2,.7,.3,1);
 }
+*/
+
+
+
+

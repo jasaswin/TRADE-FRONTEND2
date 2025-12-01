@@ -1,4 +1,4 @@
-
+/* 
 .footer {
   background-color: white;
   text-align: center;
@@ -39,4 +39,112 @@
 .footer-text .brand {
   font-weight: bold;
   color: #8a2be2;
+} */
+
+
+/* 
+
+.footer {
+  /* NEW: Ivory + baby pink gradient */
+  /* background: linear-gradient( */
+    /* 180deg, */
+    /* #fff9f1 0%,   ivory */
+    /* #ffe6ef 100%   baby pink */
+  /* ); */ 
+
+
+/*   
+  text-align: center;
+  padding: 20px 0;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.05);
+  position: relative;
+} */
+
+
+  .footer {
+  /* NEW: Ivory + baby pink gradient — enforced */
+  background: linear-gradient(
+    180deg,
+    #fff9f1 0%,
+    #ffe6ef 100%
+  ) !important;
+
+  background-color: #fff9f1 !important;  /* fallback */
+  text-align: center !important;
+  padding: 20px 0 !important;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.05) !important;
+  position: relative !important;
+  z-index: 10 !important; /* ensures nothing overlays it */
+}
+
+/* Content wrapper */
+.footer-content {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+}
+
+/* Logo keeps glow */
+.footer-logo {
+  width: 120px !important;
+  height: auto !important;
+  filter: drop-shadow(0px 0px 10px rgba(138, 43, 226, 0.4)) !important;
+  animation: glow 3s infinite alternate !important;
+}
+
+/* Text in bold black */
+.footer-text {
+  font-family: "Poppins", sans-serif !important;
+  font-size: 16px !important;
+  margin-top: 12px !important;
+  font-weight: 700 !important;     /* bold */
+  color: #000000 !important;       /* pure black */
+}
+
+/* Brand text — extra bold black */
+.footer-text .brand {
+  font-weight: 800 !important;
+  color: #000000 !important;
+}
+
+@keyframes glow {
+  from { filter: drop-shadow(0px 0px 5px rgba(138, 43, 226, 0.4)); }
+  to   { filter: drop-shadow(0px 0px 15px rgba(138, 43, 226, 0.8)); }
+}
+
+
+
+/* Content wrapper */
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Logo glow remains same */
+.footer-logo {
+  width: 120px;
+  height: auto;
+  filter: drop-shadow(0px 0px 10px rgba(138, 43, 226, 0.4));
+  animation: glow 3s infinite alternate;
+}
+
+@keyframes glow {
+  from { filter: drop-shadow(0px 0px 5px rgba(138, 43, 226, 0.4)); }
+  to   { filter: drop-shadow(0px 0px 15px rgba(138, 43, 226, 0.8)); }
+}
+
+/* NEW: Bold black footer text */
+.footer-text {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  margin-top: 12px;
+  font-weight: 700;         /* bold */
+  color: #000000;           /* pure black */
+}
+
+/* Brand name also bold + black */
+.footer-text .brand {
+  font-weight: 800;
+  color: #000000;
 }

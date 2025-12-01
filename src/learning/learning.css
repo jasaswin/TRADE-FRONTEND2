@@ -1,0 +1,418 @@
+/* frontend/src/learning/learning.css
+
+:root{
+  --bg:#0f1724;
+  --card:#0b1220;
+  --accent:#6ee7b7;
+  --muted:#94a3b8;
+  --glass: rgba(255,255,255,0.03);
+  --glass-2: rgba(255,255,255,0.04);
+  --accent-2: #7c5cff;
+  --radius:14px;
+  --gap:18px;
+  font-family: Inter, "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+.learn-root{
+  min-height: calc(100vh - 50px);
+  padding: 28px;
+  background: linear-gradient(180deg,#071026 0%, #081423 40%);
+  color:#e6eef8;
+}
+
+.learn-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:18px;
+  margin-bottom:20px;
+  padding:12px;
+  border-radius:12px;
+  background: linear-gradient(90deg, rgba(124,92,255,0.08), rgba(110,231,183,0.03));
+  box-shadow: 0 6px 18px rgba(9,15,24,0.6);
+}
+
+.learn-header h1{
+  margin:0;
+  font-size:20px;
+  letter-spacing:0.2px;
+}
+.subtitle{ margin:4px 0 0; color:var(--muted); font-size:13px }
+
+.progress-wrapper{ width:280px; }
+
+.progress-text{ font-size:12px; color:var(--muted); margin-bottom:6px; text-align:right }
+
+.progress-bar{
+  height:10px;
+  background: rgba(255,255,255,0.04);
+  border-radius:999px;
+  overflow:hidden;
+}
+.progress-fill{
+  height:100%;
+  background: linear-gradient(90deg,var(--accent-2), var(--accent));
+  width:0%;
+  transition: width 600ms cubic-bezier(.2,.9,.2,1);
+}
+
+.learn-main{ margin-top:18px; }
+
+.loader{ color:var(--muted); padding:28px; text-align:center }
+
+
+
+/* ================================
+   FONT IMPORT
+   ================================ */
+/* @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@600;700&display=swap'); */
+
+/* ================================
+   BASE CONTAINER
+   ================================ */
+/* .learning-container {
+  padding: 2rem;
+  font-family: 'Inter', sans-serif; /* default body font */
+  /* color: #2c2c2c; */
+  /* line-height: 1.6; */
+/* } */ 
+
+/* ================================
+   HERO SECTION
+   ================================ */
+/* .hero-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(90deg, #7b2ff7, #f107a3);
+  color: white;
+  border-radius: 14px;
+  padding: 2.5rem;
+  margin-bottom: 2.5rem;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.hero-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin-bottom: 0.6rem;
+}
+
+.hero-subtitle {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.05rem;
+  opacity: 0.9;
+}
+
+.hero-img {
+  width: 240px;
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.2);
+}
+
+/* ================================
+   SECTION TITLES
+   ================================ */
+/* .section-title {
+  margin: 2rem 0 1.2rem;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #222;
+} */
+
+/* ================================
+   LESSON CARDS
+   ================================ */
+/* .lessons-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.8rem;
+}
+
+.lesson-card {
+  background: white;
+  border-radius: 14px;
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
+}
+
+.lesson-icon {
+  font-size: 2.4rem;
+  margin-bottom: 0.6rem;
+}
+
+.lesson-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.4rem;
+  color: #2c2c2c;
+}
+
+.lesson-desc {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 1.2rem;
+}
+
+.start-btn {
+  background: linear-gradient(90deg, #7b2ff7, #f107a3);
+  border: none;
+  padding: 0.65rem 1.3rem;
+  color: white;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.start-btn:hover {
+  background: linear-gradient(90deg, #6a1bf4, #d9068a);
+  box-shadow: 0 4px 10px rgba(123,47,247,0.3);
+} */ 
+
+/* ================================
+   QUIZ PREVIEW
+   ================================ */
+/* .quiz-preview {
+  background: #fff7fc;
+  border-radius: 14px;
+  padding: 1.8rem;
+  text-align: center;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.08);
+  margin-bottom: 2rem;
+}
+
+.quiz-card {
+  margin-top: 1.2rem;
+}
+
+.quiz-result {
+  margin-top: 1rem;
+  font-weight: 600;
+  color: green;
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+} */
+
+
+
+
+/* 🌿 Learning Page Container */
+.learning-container {
+  background: #d8f8d8; /* light pista green */
+  min-height: 100vh;
+  padding: 2rem;
+  text-align: center;
+  color: #333;
+  font-family: "Poppins", sans-serif;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+/* 🌟 Lessons Grid Layout */
+.lessons-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.8rem;
+  margin-top: 2rem;
+}
+
+/* 📘 Lesson Card */
+.lesson-card {
+  background: #f3e8ff; /* light lilac */
+  color: #2e2e2e;
+  width: 280px;
+  padding: 1.5rem;
+  border-radius: 15px;
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.15);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.3s ease;
+  animation: slideUp 0.6s ease both;
+}
+
+.lesson-card:hover {
+  transform: translateY(-8px);
+  background: #e8dbfb; /* slightly darker lilac */
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.25);
+}
+
+/* 📘 Lesson Title & Description */
+.lesson-title {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+  color: #432e7e;
+}
+
+.lesson-desc {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/* 🚀 Start Button */
+.lesson-btn {
+  margin-top: 1rem;
+  background: #a066ff; /* soft purple */
+  color: white;
+  border: none;
+  padding: 0.6rem 1.3rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.lesson-btn:hover {
+  background: #8a49f7;
+}
+
+/* 🧠 Lesson Details Page */
+.lesson-details {
+  background: #e8fbe8; /* very light pista */
+  color: #333;
+  padding: 2rem;
+  min-height: 100vh;
+  animation: fadeIn 0.6s ease;
+}
+
+/* 🧩 Quiz Card */
+.quiz-card {
+  background: #f3e8ff; /* light lilac */
+  border-radius: 12px;
+  margin: 1rem auto;
+  padding: 1.2rem;
+  width: 60%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  animation: fadeIn 0.5s ease;
+}
+
+.quiz-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* 🎯 Quiz Options */
+.quiz-options {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin-top: 1rem;
+}
+
+.quiz-option-btn {
+  background: #a066ff;
+  color: white;
+  border: none;
+  padding: 0.7rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.quiz-option-btn:hover {
+  background: #8a49f7;
+  transform: scale(1.03);
+}
+
+/* ✅ Feedback Message */
+.feedback {
+  margin-top: 1rem;
+  font-weight: bold;
+  font-size: 1.1rem;
+  animation: fadeIn 0.3s ease;
+}
+
+.feedback.correct {
+  color: #28a745;
+}
+
+.feedback.wrong {
+  color: #d9534f;
+}
+
+/* 🔙 Back Button */
+.back-btn {
+  margin-top: 2rem;
+  background: #333;
+  color: white;
+  border: none;
+  padding: 0.7rem 1.5rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.back-btn:hover {
+  background: #555;
+  transform: scale(1.05);
+}
+
+/* ✨ Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+
+
+/* ✅ Next button animation */
+.next-btn {
+  margin-top: 1rem;
+  background: #b8a6f2; /* light lilac */
+  color: white;
+  border: none;
+  padding: 0.7rem 1.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.4s ease;
+  animation: fadeSlideIn 0.6s forwards;
+}
+
+.next-btn:hover {
+  background: #9b8ae8;
+  transform: translateY(-2px) scale(1.05);
+}
+
+
+
+/* ✨ Animation effect for sliding in */
+@keyframes fadeSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ✅ Light pista background for learning page */
+.learning-container {
+  background-color: #d7f8d0;
+}
+
+/* ✅ Quiz & lesson card color theme */
+.lesson-card,
+.quiz-card {
+  background-color: #ebe2ff; /* soft lilac */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.lesson-card:hover,
+.quiz-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+}

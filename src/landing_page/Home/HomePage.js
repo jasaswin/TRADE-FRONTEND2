@@ -39,12 +39,14 @@ import CallToAction from "./CallToAction";
 import Footer from "./Footer";
 import "./home.css";
 
+
 const Home = () => {
   return (
     <>
       <Header />
       <Hero />
       <FeaturesSection />
+    
     
       <CallToAction />
       <Footer />

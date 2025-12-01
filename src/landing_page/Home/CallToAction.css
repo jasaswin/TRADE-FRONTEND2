@@ -1,36 +1,45 @@
+
 /* Importing a professional, aesthetic font */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
 
 .cta-section {
   width: 100%;
-  padding: 50px 0;
+  padding: 60px 0;
   display: flex;
   justify-content: center;
+  background: linear-gradient(
+    180deg,
+    #ffe6ef 0%,      /* baby pink */
+    #fff9f1 100%     /* ivory */
+  );
 }
 
 .cta-card {
-  background: linear-gradient(135deg, #e8f6f3, #d4ede9); /* Cool, aesthetic background */
-  border-radius: 12px;
-  padding: 40px 60px;
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 16px;
+  padding: 45px 70px;
   text-align: center;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
   max-width: 900px;
   width: 90%;
   font-family: 'Inter', sans-serif;
 }
 
 .cta-title {
-  font-size: 2rem;
+  font-size: 2.2rem;
   font-weight: 600;
-  margin-bottom: 20px;
-  color: #023430;
+  margin-bottom: 25px;
+  color: #333;
 }
 
+/* SIGNUP button */
 .cta-button {
-  background-color: #4CAF50; /* Light green button */
+  background-color: #4CAF50; /* your green button */
   color: white;
   border: none;
-  padding: 15px 40px;
+  padding: 15px 45px;
   font-size: 1.1rem;
   font-family: 'Inter', sans-serif;
   border-radius: 30px;
@@ -38,6 +47,7 @@
   position: relative;
   z-index: 1;
   animation: pulseBorder 2s infinite;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
 }
 
 /* Glowing animated border effect */
@@ -55,9 +65,9 @@
   z-index: -1;
 }
 
+/* animated glow */
 @keyframes borderMove {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
 }
-

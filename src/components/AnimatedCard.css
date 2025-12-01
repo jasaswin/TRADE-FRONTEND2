@@ -1,0 +1,49 @@
+
+.animated-card{
+  background: var(--card-bg);
+  border-radius: var(--radius-lg);
+  padding: 1.6rem;
+  box-shadow: var(--card-shadow);
+  transition: transform var(--transition), box-shadow var(--transition);
+  will-change: transform;
+  border: 1px solid rgba(36, 39, 56, 0.04); /* subtle border for depth */
+}
+
+/* small icon accent (if using icon inside) */
+.animated-card .card-icon{
+  width: 56px;
+  height: 56px;
+  border-radius: 12px;
+  background: linear-gradient(180deg, rgba(108,99,255,0.12), rgba(58,176,255,0.08));
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+/* card title + text */
+.animated-card h3{
+  margin: 0 0 0.45rem 0;
+  font-family: var(--font-heading);
+  color: var(--text);
+  font-size: 1.25rem;
+}
+.animated-card p{
+  margin: 0;
+  color: var(--text-muted);
+  line-height: 1.5;
+  font-size: 0.98rem;
+}
+
+/* button inside card (optional) */
+.animated-card .card-cta{
+  margin-top: 1.15rem;
+  display: inline-block;
+  padding: 0.48rem 1rem;
+  border-radius: 999px;
+  background: var(--gradient-cta);
+  color: #fff;
+  font-weight: 600;
+  box-shadow: 0 8px 26px rgba(108,99,255,0.12);
+  transition: transform .18s ease, box-shadow .18s ease;
+}

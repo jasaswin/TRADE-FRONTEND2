@@ -1,4 +1,4 @@
-body {
+/* body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -10,4 +10,103 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+} */
+
+
+
+
+
+/* src/index.css : Global palette + body animation for Palette 4 */
+
+:root{
+  --primary: #6C63FF;
+  --secondary: #3AB0FF;
+  --accent-pink: #FF6EC7;
+
+  --bg-light: #F8F9FC;
+  --header-glass: rgba(255,255,255,0.55);
+  --footer-bg: #2A2D41;
+
+  --card-bg: #FFFFFF;
+  --card-shadow: 0 10px 30px rgba(0,0,0,0.08);
+
+  --text: #222B45;
+  --text-muted: #8F9BB3;
+
+  --gradient-cta: linear-gradient(90deg, #6C63FF, #3AB0FF);
+  --gradient-hover: linear-gradient(90deg, #5A53EE, #239DF5);
+
+  --radius-lg: 18px;
+  --radius-pill: 999px;
+
+  --glass-blur: blur(12px);
+  --transition: 240ms cubic-bezier(.2,.7,.3,1);
 }
+
+/* Reset basics */
+* { box-sizing: border-box; }
+html,body,#root { height: 100%; margin: 0; }
+
+/* Body base */
+body {
+  font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  background: var(--bg-light);
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* subtle animated background layers */
+body::before,
+body::after {
+  content: "";
+  position: fixed;
+  left: -12%;
+  top: -28%;
+  width: 140vw;
+  height: 140vh;
+  pointer-events: none;
+  z-index: -2;
+  filter: blur(140px);
+  opacity: 0.45;
+  transform: translate3d(0,0,0);
+}
+
+/* purple + blue soft blobs */
+body::before {
+  background: radial-gradient(500px 400px at 18% 22%, rgba(108,99,255,0.14), transparent 22%),
+              radial-gradient(400px 300px at 80% 82%, rgba(58,176,255,0.10), transparent 30%);
+  animation: floatSlow 20s linear infinite;
+}
+body::after {
+  background: radial-gradient(700px 420px at 72% 10%, rgba(58,176,255,0.06), transparent 25%),
+              radial-gradient(420px 300px at 32% 80%, rgba(255,110,199,0.05), transparent 30%);
+  animation: floatSlow 30s linear infinite reverse;
+}
+
+@keyframes floatSlow {
+  0% { transform: translateY(0px) scale(1); }
+  50% { transform: translateY(-18px) scale(1.02); }
+  100% { transform: translateY(0px) scale(1); }
+}
+
+/* container helper */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.2rem;
+}
+
+/* reduce motion preference */
+@media (prefers-reduced-motion: reduce) {
+  body::before, body::after { animation: none; transform: none; filter: blur(80px); opacity: 0.35; }
+  * { transition: none !important; animation: none !important; }
+}
+
+
+
+
+
+
+

@@ -1,5 +1,5 @@
 
-.hero-container {
+ /* .hero-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -8,7 +8,29 @@
   background: linear-gradient(135deg, #f5f7fa, #e6ecf0);
   position: relative;
   z-index: 1; /* above background animation */
+/* }   */
+
+
+
+
+.hero-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 80px 10%;
+  min-height: 100vh;
+
+  /* NEW background: baby pink + ivory mixture */
+  background: linear-gradient(
+    180deg,
+    #ffe6ef 0%,     /* baby pink */
+    #fff9f1 100%    /* ivory */
+  );
+
+  position: relative;
+  z-index: 1; /* above background animation */
 }
+
 
 .hero-left {
   flex: 1;
@@ -31,12 +53,17 @@
   font-weight: bold;
   color: #1a1a1a;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-}
-
+} */
+ 
 .hero-subtext {
   margin-top: 15px;
   font-size: 1.2rem;
   color: #555;
   line-height: 1.6;
   max-width: 500px;
-}
+} 
+
+
+
+
+
