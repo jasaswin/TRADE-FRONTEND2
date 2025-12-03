@@ -9,7 +9,7 @@ const Footer = () => {
         {/* Direct path from public folder */}
         <img src="/media/images/logo.png" alt="TradeNest Logo" className="footer-logo" />
         <p className="footer-text">
-          Built by <span className="brand">Jasaswini</span>, © {new Date().getFullYear()}
+          Built by <span className="brand">Crusaders</span>, © {new Date().getFullYear()}
         </p>
       </div>
     </footer>

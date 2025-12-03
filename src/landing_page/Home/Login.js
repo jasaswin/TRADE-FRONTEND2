@@ -121,7 +121,7 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { useAuth } from "../../AuthContext";
 import "./auth.css";
-import api from "../../../api"; // <-- updated import (points to src/api.js)
+import api from "../../api"; // <-- updated import (points to src/api.js)
 
 export default function Login({ close, openSignup }) {
   const { login } = useAuth();
